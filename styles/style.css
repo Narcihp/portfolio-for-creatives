@@ -10,10 +10,8 @@
 
 /* TODO: Delete the Google Fonts below and add the Google Fonts you want to use on your site. Each Google font that you load will slightly increase the download speed of your site so make sure to only included necessary fonts here. */
 
-@import url("https://fonts.googleapis.com/css2?family=Hepta+Slab|Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /*
 
@@ -80,15 +78,16 @@ html {
 /* TODO: Adjust the variables below, create new variables as desired, and delete the variables that you do not want to use. */
 
 :root {
-  --body-typeface: "Inter", sans-serif;
-  --heading-typeface: "Eczar", serif;
-  --project-title-typeface: "Eczar", serif;
+  --body-typeface: "Roboto", sans-serif;
+  --heading-typeface: "Caveat", cursive;
+  --project-title-typeface: "Caveat", cursive;
   --background-color: #fdfdfd;
   --background-color-about: #f5f5f5;
   --background-color-footer: #f5f5f5;
+  --background-color-hero: rgb(223, 218, 212);
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(82, 0, 255, 0.6);
-  --h1-color: #5200ff;
+  --h1-color: #0b0b0c;
   --h2-color: #5200ff;
   --h3-color: #5200ff;
   --h4-color: #5200ff;
@@ -105,8 +104,8 @@ html {
   --hover-color: #111;
   --visited-color: #5200ff;
   --project-title-color: #5200ff;
-  --project-sidebar-background-color: orangered;
-  --project-sidebar-text-color: white;
+  --project-sidebar-background-color: transparent;
+  --project-sidebar-text-color: black;
   --heart-color: darkred;
   --holding-page-footer-color: #f8f8ff;
   --text-selection-background-color: #5200ff;
@@ -319,6 +318,7 @@ a:active {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
+  background: var(--background-color-hero);
 }
 
 .branding-navigation {
@@ -578,13 +578,7 @@ a:active {
 .project-details {
   width: 100%;
   padding: 1rem;
-  /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
-  background-image: linear-gradient(
-    -225deg,
-    var(--linear-gradient-color-1) 0%,
-    var(--linear-gradient-color-2) 50%,
-    var(--linear-gradient-color-3) 100%
-  );
+
 }
 
 /* 
@@ -715,7 +709,7 @@ a:active {
   }
 
   h1 {
-    font-size: 4.275rem;
+    font-size: 6.275rem;
   }
 
   h2 {
@@ -730,6 +724,12 @@ a:active {
     width: 5rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
+
+
+.wordmark {fill:rgb(236, 180, 128);}
+
+.wordmark:hover {fill:brown;}
+
 
   .hero {
     min-height: 100vh;
@@ -868,6 +868,6 @@ a:active {
   /* TODO: Add styles here for XX-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
 }
