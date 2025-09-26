@@ -80,10 +80,10 @@ html {
   --body-typeface: "Roboto", sans-serif;
   --heading-typeface: "Caveat", cursive;
   --project-title-typeface: "Caveat", cursive;
-  --background-color: #f5dcadab;
+  --background-color: #ffffff;
   --background-color-about: #f5dcadab;
   --background-color-footer: #ffffff;
-  --background-color-hero: #f5dcadab;
+  --background-color-hero: #ffffff;
   --alt-background-color: #000000;
   --background-color-holding-page: #f5dcadab;
   --h1-color: #442909;
@@ -274,7 +274,7 @@ a:active {
 .colored-link {
   color: var(--hyperlink-alternate-color);
 }
-
+.custom-navigation {text-transform: uppercase;}
 .custom-navigation:hover {
   background: url(assets/temp/heading-background.svg);
   background-size: 15%;
@@ -336,7 +336,7 @@ a:active {
 }
 
 .logo {
-  width: 3rem;
+  width: 0.5rem;
   /* TODO: Adjust the width of the logo on mobile devices here. */
 }
 
