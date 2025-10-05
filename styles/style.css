@@ -327,18 +327,56 @@ a:active {
   background: var(--background-color-hero);
 }
 
+
+/* Branding Navigation
+███    ██ ██████   █████  ██████  ███████ ██ ███    ██  ██████  
+████   ██ ██   ██ ██   ██ ██   ██ ██      ██ ████   ██ ██       
+██ ██  ██ ██████  ███████ ██████  █████   ██ ██ ██  ██ ██   ███ 
+██  ██ ██ ██      ██   ██ ██   ██ ██      ██ ██  ██ ██ ██    ██ 
+██   ████ ██      ██   ██ ██   ██ ███████ ██ ██   ████  ██████  
+
+/* Main navigation container */
 .branding-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem;
-  align-items: flex-start;
+  position: relative;       /* so children can be positioned inside */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  width: 0.5rem;
-  /* TODO: Adjust the width of the logo on mobile devices here. */
+/* Logo pinned top-left */
+.branding-navigation .logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 4rem; /* adjust size */
 }
+
+/* Nav items pinned top-right, stacked vertically */
+.branding-navigation .nav-item {
+  position: absolute;
+  right: 40px;
+}
+
+.branding-navigation .nav-item:nth-of-type(2) { top: 30px; right: 50px;}     /* Work */
+.branding-navigation .nav-item:nth-of-type(3) { top: 150px; right: 50px;}    /* About */
+.branding-navigation .nav-item:nth-of-type(4) { top: 290px; right: 50px;}   /* Contact */
+
+/* Nav link styling */
+.branding-navigation .nav-item a {
+  display: block;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--hyperlink-color);
+}
+
+.branding-navigation .nav-item a:hover {
+  color: var(--hover-color);
+}
+
 
 .hero-headline-wrapper {
   display: flex;
@@ -349,6 +387,7 @@ a:active {
   padding: 2rem 4rem;
   text-align: center;
 }
+
 
 .hero-icon {
   font-size: 4rem;
@@ -390,6 +429,7 @@ a:active {
 .work-wrapper {
   flex: 1;
 }
+
 
 /* Padding around work grid and project page */
 .portfolio,
