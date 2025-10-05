@@ -80,29 +80,29 @@ html {
   --body-typeface: "Roboto", sans-serif;
   --heading-typeface: "Caveat", cursive;
   --project-title-typeface: "Caveat", cursive;
-  --background-color: #ffffff;
-  --background-color-about: #f5dcadab;
-  --background-color-footer: #ffffff;
-  --background-color-hero: #ffffff;
+  --background-color: #F7F3E9;
+  --background-color-about: #F7F3E9;
+  --background-color-footer: #F7F3E9;
+  --background-color-hero: #F7F3E9;
   --alt-background-color: #000000;
   --background-color-holding-page: #f5dcadab;
-  --h1-color: #442909;
-  --h2-color: #442909;
-  --h3-color: #442909;
-  --h4-color: #442909;
-  --h5-color: #442909;
-  --h6-color: #442909;
-  --primary-text-color: #442909;
+  --h1-color: #333333;
+  --h2-color: #333333;
+  --h3-color: #333333;
+  --h4-color: #333333;
+  --h5-color: #333333;
+  --h6-color: #333333;
+  --primary-text-color: #333333;
   --holding-page-title-color: #ebedf0;
   --accent-color: #fafafb;
-  --overlay-color: #442909;
+  --overlay-color: #333333;
   --overlay-title-color: #ffffff;
   --overlay-description-color: #ffffff;
-  --hyperlink-color: #442909;
+  --hyperlink-color: #333333;
   --hyperlink-alternate-color: orangered;
   --hover-color: #111;
-  --visited-color: #442909;
-  --project-title-color: #442909;
+  --visited-color: #333333;
+  --project-title-color: #333333;
   --project-sidebar-background-color: transparent;
   --project-sidebar-text-color: black;
   --heart-color: darkred;
@@ -328,6 +328,8 @@ a:active {
 }
 
 
+
+
 /* Branding Navigation
 ███    ██ ██████   █████  ██████  ███████ ██ ███    ██  ██████  
 ████   ██ ██   ██ ██   ██ ██   ██ ██      ██ ████   ██ ██       
@@ -386,6 +388,15 @@ a:active {
   justify-content: center;
   padding: 2rem 4rem;
   text-align: center;
+}
+
+/* Image centered on screen */
+.center-image {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 400px;           /* adjust size */
+  transform: translate(-50%, -50%); /* perfectly center it */
 }
 
 
