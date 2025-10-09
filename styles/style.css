@@ -321,7 +321,7 @@ a:active {
 */
 
 .hero {
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: var(--background-color-hero);
@@ -393,9 +393,9 @@ a:active {
 /* Image centered on screen */
 .center-image {
   position: absolute;
-  top: 20%;
+  top: 0.3%;
   left: 50%;
-  width: 400px;           /* adjust size */
+  width: 500px;           /* adjust size */
   transform: translate(-50%, -50%); /* perfectly center it */
 }
 
