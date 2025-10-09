@@ -10,9 +10,11 @@
 
 /* TODO: Delete the Google Fonts below and add the Google Fonts you want to use on your site. Each Google font that you load will slightly increase the download speed of your site so make sure to only included necessary fonts here. */
 
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Jaro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+
 
 /*
 
@@ -80,8 +82,8 @@ html {
 
 :root {
   --body-typeface: "Roboto", sans-serif;
-  --heading-typeface: "Caveat", cursive;
-  --project-title-typeface: "Caveat", cursive;
+  --heading-typeface: "Roboto", sans-serif;
+  --project-title-typeface: "Roboto", sans-serif;
   --background-color: #F7F3E9;
   --background-color-about: #F7F3E9;
   --background-color-footer: #F7F3E9;
@@ -152,26 +154,52 @@ svg {
                                                                                      
 */
 
-
-
-h1 {
-  font-size: 15rem;
+.hero-headline-wrapper .main-title {
   font-family: "Jaro", sans-serif;
-  margin-top: 15rem; 
+  font-size: 8rem;
+  margin-top: 16rem;
   margin-bottom: 1rem;
   color: var(--h1-color);
 }
-.p{
-  font-size: 1.7rem;
+
+
+.role {
+  font-family: "Jaro", sans-serif;
+  font-size: clamp(1.2rem, 4vw, 3rem);
+  color: #4C4C4C;
+  position: relative;
+  display: inline-block;
 }
-#greeting {
-  animation: fade-in 1s ease-in-out;
-  margin-bottom: 1rem;
+
+.role .layer {
+  position: absolute;
+  inset: 0;
+  white-space: nowrap;
+  will-change: filter, opacity;
+  transform: translateZ(0);
+}
+
+.role .layer.current {
+  opacity: 1;
+  filter: blur(0);
+  transition: opacity 1100ms ease, filter 1100ms ease;
+}
+
+.role .layer.next {
+  opacity: 0;
+  filter: blur(12px);
+  transition: opacity 1100ms ease, filter 1100ms ease;
+}
+.role {
+  text-align: center;
+  margin-top: 0rem;
+  margin-bottom: 10rem;
+  width: 100%;
 }
 
 h2 {
   font-size: 2.25rem;
-  font-family: var(--heading-typeface);
+  font-family: var(--header-typeface);
   margin-bottom: 1rem;
   color: var(--h2-color);
 }
@@ -203,7 +231,7 @@ h6 {
 
 p {
   font-size: 1rem;
-  line-height: 1.3;
+  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
@@ -315,6 +343,49 @@ a:active {
   margin-bottom: 1rem;
 }
 
+.work-page-grid-item figure,
+.work-page-grid-item img,
+.work-page-grid-item .overlay {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.work-page-grid-item {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* ← dark shadow layer */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* pattern layer on top of the shadow */
+.overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/Hoveringonprojects.png"); /* your PNG file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;  /* adjust to control how strong the pattern looks */
+  pointer-events: none; /* so it doesn't block links */
+}
+
+.work-page-grid-item:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+
 /* Hero 
 
 ██   ██ ███████ ██████   ██████  
@@ -365,18 +436,19 @@ a:active {
 }
 
 .branding-navigation .nav-item:nth-of-type(2) { top: 30px; right: 50px;}     /* Work */
-.branding-navigation .nav-item:nth-of-type(3) { top: 150px; right: 50px;}    /* About */
-.branding-navigation .nav-item:nth-of-type(4) { top: 290px; right: 50px;}   /* Contact */
+.branding-navigation .nav-item:nth-of-type(3) { top: 70px; right: 50px;}    /* About */
+.branding-navigation .nav-item:nth-of-type(4) { top: 110px; right: 50px;}   /* Contact */
 
 /* Nav link styling */
 .branding-navigation .nav-item a {
   display: block;
-  writing-mode: vertical-rl;
+  writing-mode: horizontal-tb;
   text-orientation: upright;
-  font-weight: bold;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: var(--header-typeface);
+  text-transform: none;
   text-decoration: none;
+  --heading-typeface: "Roboto", sans-serif;
   color: var(--hyperlink-color);
 }
 
