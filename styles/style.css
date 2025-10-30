@@ -166,7 +166,7 @@ svg {
 .role {
   font-family: "Jaro", sans-serif;
   font-size: clamp(1.2rem, 4vw, 3rem);
-  color: #4C4C4C;
+  color: #941c1c;
   position: relative;
   display: inline-block;
 }
@@ -187,7 +187,7 @@ svg {
 
 .role .layer.next {
   opacity: 0;
-  filter: blur(12px);
+  filter: blur(1px);
   transition: opacity 1100ms ease, filter 1100ms ease;
 }
 .role {
@@ -421,12 +421,20 @@ a:active {
   padding: 0;
 }
 
+.branding-navigation .name {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 2.25rem;
+  width: 14rem; /* adjust size */
+}
+
 /* Logo pinned top-left */
 .branding-navigation .logo {
   position: absolute;
   top: 30px;
-  left: 30px;
-  width: 4rem; /* adjust size */
+  left: 48%;
+  width: 0rem; /* adjust size */
 }
 
 /* Nav items pinned top-right, stacked vertically */
@@ -435,16 +443,16 @@ a:active {
   right: 40px;
 }
 
-.branding-navigation .nav-item:nth-of-type(2) { top: 30px; right: 50px;}     /* Work */
-.branding-navigation .nav-item:nth-of-type(3) { top: 70px; right: 50px;}    /* About */
-.branding-navigation .nav-item:nth-of-type(4) { top: 110px; right: 50px;}   /* Contact */
+.branding-navigation .nav-item:nth-of-type(2) { top: 53px; right: 170px;}     /* Work */
+.branding-navigation .nav-item:nth-of-type(3) { top: 53px; right: 60px;}    /* About */
+
 
 /* Nav link styling */
 .branding-navigation .nav-item a {
   display: block;
   writing-mode: horizontal-tb;
   text-orientation: upright;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: var(--header-typeface);
   text-transform: none;
   text-decoration: none;
@@ -470,9 +478,9 @@ a:active {
 /* Image centered on screen */
 .center-image {
   position: absolute;
-  top: 0.3%;
+  top: 40%;
   left: 50%;
-  width: 500px;           /* adjust size */
+  width: 1420px;           /* adjust size */
   transform: translate(-50%, -50%); /* perfectly center it */
 }
 
@@ -522,7 +530,7 @@ a:active {
 /* Padding around work grid and project page */
 .portfolio,
 .project-wrapper {
-  padding: 0.25rem;
+  padding: 1rem;
 }
 
 /* Defining the work page grid */
@@ -575,34 +583,31 @@ a:active {
                                            
 */
 
-.about {
+
+.about-page {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
   background: var(--background-color-about);
   padding: 1rem;
   flex: 1;
+  
 }
 
 .about-item-1 {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  margin-top: 5rem;
 }
 
 .about-item-2 {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  margin-top: 4rem;
 }
 
-.about-item-3 {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-}
 
-.about-item-4 {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-}
+
 
 /* Global Footer
 
@@ -615,17 +620,23 @@ a:active {
 */
 
 .global-footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
-  min-height: 20vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 4rem; 
+  min-height: 50vh;
   background: var(--background-color-footer);
-  padding: 1rem;
+  text-align: center;
+  padding: 2rem;
 }
+
+
 
 .footer-item-1 {
   grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  grid-row: 1 / 2 ;
+   
 }
 
 .footer-item-2 {
@@ -638,14 +649,7 @@ a:active {
   grid-row: 3 / 4;
 }
 
-.footer-item-4 {
-  grid-column: 1 / 2;
-  grid-row: 4 / 5;
-}
 
-.awards-list {
-  margin-bottom: 2rem;
-}
 
 /* Project Page 
 
