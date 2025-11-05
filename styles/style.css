@@ -56,7 +56,8 @@ No media query for `xs` since this is the default in Bootstrap
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  cursor: url("../assets/temp/up-cursor.png"), auto !important;
+  /* cursor: url("../assets/temp/up-cursor.png"), auto !important; */
+
   /* TODO: Change the url above to add a custom cursor. Delete the line above if you want to use the default browser cursor. */
 }
 
@@ -153,6 +154,10 @@ svg {
    ██       ██    ██       ██████   ██████  ██   ██ ██   ██ ██      ██   ██    ██    
                                                                                      
 */
+
+
+
+.hero-header {background: lightblue;}
 
 .hero-headline-wrapper .main-title {
   font-family: "Jaro", sans-serif;
@@ -401,6 +406,7 @@ a:active {
   display: flex;
   flex-direction: column;
   background: var(--background-color-hero);
+  background: lemonchiffon;
 }
 
 
@@ -473,6 +479,7 @@ a:active {
   justify-content: center;
   padding: 2rem 4rem;
   text-align: center;
+  background: lightpink;
 }
 
 /* Image centered on screen */
