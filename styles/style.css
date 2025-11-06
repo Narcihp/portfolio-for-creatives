@@ -111,7 +111,7 @@
   /* Core Colours */
   --color-text-primary: #222;
   --color-text-secondary: #333;
-  --color-accent-primary: #5200ff;
+  --color-accent-primary: #ffffff;
   --color-accent-secondary: #ff057c;
   --color-overlay-primary: rgba(82, 0, 255, 0.5);
   --color-highlight: lemonchiffon;
@@ -130,19 +130,19 @@
   --h6-color: #222;
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
-  --color-text-project-category: #ffffff;
+  --color-text-project-category: #222;
   --color-text-project-description: #222;
   --color-text-project-sidebar: #222;
   --color-text-project-title: #222;
-  --color-text-work-grid-title: #ffffff;
+  --color-text-work-grid-title: #222;
   /* Link States */
   --color-link: #222;
   --color-link-hover: #111;
-  --color-link-visited: #ff7700;
+  --color-link-visited: #222;
   /* Navigation */
   --color-nav-link: #222;
   --color-nav-link-hover: #321575;
-  --color-nav-arrow: #5200ff;
+  --color-nav-arrow: #222;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #747474;
   --color-nav-arrow-stroke-hover: #000;
@@ -1008,15 +1008,7 @@ a.nav-link-primary:hover {
 /* ------------------------------- */
 /* 📜 Reusable footer list styles */
 /* ------------------------------- */
-.footer-list {
-  margin-bottom: 2rem;
-}
-.footer-awards-list {
-  margin-bottom: 2rem;
-}
-.footer-works-list {
-  margin-bottom: 2rem;
-}
+
 .footer-socials-list {
   margin-bottom: 2rem;
 }
