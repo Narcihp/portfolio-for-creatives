@@ -79,11 +79,10 @@
         <h2>About Narci</h2>
 
         <p>
-          I hold a Bachelor's degree in Design in Visual Communication with open
+          I hold a Bachelor's degree in Design in Visual Communication with interdisciplinary
           contentration.
         </p>
 
-        <h3>Get to know me</h3>
 
         <p>
           I go by Narci since moving to beautiful Vancouver, BC, where I also
@@ -99,8 +98,6 @@
           create.
         </p>
 
-        <h3>When not designing, what is Narci doing?</h3>
-
         <p>
           When I’m not designing, you’ll likely find me taking photos on the
           street, exploring matcha cafés, sketching ideas for my next project,
@@ -108,50 +105,45 @@
           in Japanese).
         </p>
 
-        <h3>Let’s connect: narcihp708@gmail.com</h3>
+       
       </li>
     </ul>
-    <ul class="footer-global">
-      <li class="footer-tagline">
-        <h2>Let's Connect!</h2>
-        <p>
-          Feel free to reach out with any questions, collaborations, or just to
-          chat about design.
-        </p>
-      </li>
 
-      <li class="footer-highlights">
-        <h2>Awards & Recognition</h2>
-        <ul class="footer-awards-list">
-          <li class="footer-item">
-            <a href="#">Dean’s List – Year or Term</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Your Award – Name of Student Award and Year</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Honourable Mention – Project or Competition Name</a>
-          </li>
-          <li class="footer-item">
-            <a href="#">Other Recognition or Accolade</a>
-          </li>
-        </ul>
-      </li>
+
+    <ul class="footer-global">
+      
+      
 
       <li class="footer-contact-social">
         <h2>Contact & Social</h2>
         <ul class="footer-socials-list">
-          <li class="footer-item"><a href="#">Insta</a></li>
-          <li class="footer-item"><a href="#">LinkedIn</a></li>
-          <li class="footer-item"><a href="#">Behance</a></li>
+          <li class="footer-item">
+            <a href="mailto:narcihp708@email.com">narcihp708@email.com</a>
+          </li>
+            
+            <a href="https://www.instagram.com/narci.hpr" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/narci-hp/" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          </li>
+
+          <a href="https://www.behance.net/narcihp" target="_blank">
+            <i class="fa-brands fa-behance"></i>
+          </a>
+        </li>
+
         </ul>
       </li>
 
       <li class="footer-full-width">
-        <p><a href="#top">Smooth scroll to the top</a></p>
+       
         <p class="footer-fineprint">
           &copy; <span id="copyright-years"></span>
           Narci Hashem Pour
+        </p>
         </p>
         <script>
           document.getElementById("copyright-years").textContent +=
@@ -159,5 +151,22 @@
         </script>
       </li>
     </ul>
+
+    <div id="myID" class="bottomMenu hide"><a href="#">Back to top</a></div>
+
+    <script>
+      myID = document.getElementById("myID");
+
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "bottomMenu show";
+        } else {
+          myID.className = "bottomMenu hide";
+        }
+      };
+
+      window.addEventListener("scroll", myScrollFunc);
+    </script>
   </body>
 </html>

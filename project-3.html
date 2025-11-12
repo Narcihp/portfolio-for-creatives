@@ -67,14 +67,12 @@
     <div class="project-wrapper">
       <aside class="project-aside">
         <div class="project-info">
-          <h1 class="project-title">Project 3: [Your Title Here]</h1>
+          <h1 class="project-title">Calm Commute</h1>
           <p class="project-description">
-            Replace with your project description. Highlight your role, the
-            challenges you solved, and your design process.
+            A sensory-friendly app designed for individuals with sensory challenges, helping them commute more comfortably and with less stress.
           </p>
           <p class="project-description">
-            <strong>Quick tip:</strong> This is project-3.html. Duplicate it to
-            add more projects and update the navigation arrows.
+            <strong>How?</strong> It provides tools like planned trips, distraction games, checklists, and short meditations to make commuting easier and more manageable.
           </p>
         </div>
         <ul class="project-navigation">
@@ -84,7 +82,7 @@
             ></a>
           </li>
           <li class="arrow">
-            <a href="project-1.html" class="navigation-arrow"
+            <a href="project-4.html" class="navigation-arrow"
               ><i class="fa-sharp fa-solid fa-arrow-right fa-2x"></i
             ></a>
           </li>
@@ -100,20 +98,80 @@
         </figure>
       </main>
     </div>
-    <div class="footer-global-wrapper">
-      <h2>Minimal Footer</h2>
-      <div class="footer-full-width">
+    
+
+    <ul class="footer-global">
+      
+      
+
+      <li class="footer-contact-social">
+        <h2>Contact & Social</h2>
+        <ul class="footer-socials-list">
+          <li class="footer-item">
+            <a href="mailto:narcihp708@email.com">narcihp708@email.com</a>
+          </li>
+            
+            <a href="https://www.instagram.com/narci.hpr" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/narci-hp/" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          </li>
+
+          <a href="https://www.behance.net/narcihp" target="_blank">
+            <i class="fa-brands fa-behance"></i>
+          </a>
+        </li>
+
+        </ul>
+      </li>
+
+      <li class="footer-full-width">
+       
         <p class="footer-fineprint">
-          &copy; 2020-2025. Hand crafted with
-          <span class="heart">❤</span>
-          by James Neufeld.
+          &copy; <span id="copyright-years"></span>
+          Narci Hashem Pour
         </p>
-      </div>
+        </p>
+        <script>
+          document.getElementById("copyright-years").textContent +=
+            new Date().getFullYear();
+        </script>
+      </li>
+    </ul>
+
+    <div id="myID" class="bottomMenu hide"><a href="#">Back to top</a></div>
+
+    <script>
+      myID = document.getElementById("myID");
+
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "bottomMenu show";
+        } else {
+          myID.className = "bottomMenu hide";
+        }
+      };
+
+      window.addEventListener("scroll", myScrollFunc);
+    </script>
+  </body>
+</html>
+
+
+
+    <div id="myID" class="bottomMenu hide">
+      <a href="project-2.html">Previous Project</a>
     </div>
 
     <div id="myID" class="bottomMenu hide">
-      <a href="project-1.html">Previous Project</a>
+      <a href="project-4.html">Next Project</a>
     </div>
+
+  
 
     <script type="text/javascript">
       myID = document.getElementById("myID");
