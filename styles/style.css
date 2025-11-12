@@ -117,9 +117,9 @@
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #F7F3E9;
-  --color-bg-about: #F7F3E9;
-  --color-bg-footer: #F7F3E9;
+  --color-bg: #f7f3e9;
+  --color-bg-about: #f7f3e9;
+  --color-bg-footer: #f7f3e9;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
   --h1-color: #222;
@@ -147,12 +147,17 @@
   --color-nav-arrow-stroke: #747474;
   --color-nav-arrow-stroke-hover: #000;
   /* Components */
-  --color-bg-full-width: #F7F3E9;
+  --color-bg-full-width: #f7f3e9;
   --color-bg-project-description: #f5dddd;
-  --color-bg-sidebar-project: #F7F3E9;
+  --color-bg-sidebar-project: #f7f3e9;
   --color-bg-sidebar-work: lemonchiffon;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
-  --color-gradient-project-details: linear-gradient(-225deg, #ff057c 0%, #8d0b93 50%, #321575 100%);
+  --color-gradient-project-details: linear-gradient(
+    -225deg,
+    #ff057c 0%,
+    #8d0b93 50%,
+    #321575 100%
+  );
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
@@ -234,7 +239,9 @@ body {
 /* ------------------------------- */
 
 ::selection {
-  background: var(--color-bg-selection); /* Uses your custom color for highlighted text */
+  background: var(
+    --color-bg-selection
+  ); /* Uses your custom color for highlighted text */
 }
 
 /* ---------------------------------------- */
@@ -682,6 +689,15 @@ a.nav-link-primary:hover {
   min-height: 80vh; /* Takes up most of the screen height */
   display: flex;
   flex-direction: column;
+  padding: var(--padding-jumbo);
+}
+
+.hero-small {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-jumbo);
+  padding-bottom: 0;
 }
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
@@ -691,7 +707,6 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: var(--padding-small);
   align-items: center;
 }
 
@@ -714,9 +729,8 @@ a.nav-link-primary:hover {
   flex-direction: column;
   flex: 1;
   gap: 3rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: var(--padding-small);
   text-align: center; /* Keeps text centered */
 }
 
@@ -761,7 +775,9 @@ a.nav-link-primary:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--color-bg-full-width); /* Background color for full-width sections */
+  background: var(
+    --color-bg-full-width
+  ); /* Background color for full-width sections */
   margin-bottom: 1rem;
 }
 
@@ -815,13 +831,17 @@ a.nav-link-primary:hover {
 .portfolio,
 .project-wrapper,
 .work-sidebar-wrapper {
-  padding: var(--padding-tiny); /* Padding to keep content from touching edges */
+  padding: var(
+    --padding-tiny
+  ); /* Padding to keep content from touching edges */
 }
 
 /* Work Sidebar on Mobile */
 .work-sidebar {
   width: 100%;
-  background: var(--color-bg-sidebar-work); /* Background color for the sidebar */
+  background: var(
+    --color-bg-sidebar-work
+  ); /* Background color for the sidebar */
 }
 
 /* Main Work Area with Sidebar on Mobile */
@@ -832,7 +852,10 @@ a.nav-link-primary:hover {
 /* Defining the work page grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates a responsive grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Creates a responsive grid */
   grid-gap: 1rem; /* Space between grid items */
   /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
 }
@@ -871,7 +894,9 @@ a.nav-link-primary:hover {
   align-items: center;
   flex-direction: column;
   padding: var(--padding-small);
-  background-color: var(--color-overlay-primary); /* Background color of the overlay */
+  background-color: var(
+    --color-overlay-primary
+  ); /* Background color of the overlay */
   transition: opacity var(--duration-normal), visibility var(--duration-normal);
 }
 
@@ -982,17 +1007,10 @@ a.nav-link-primary:hover {
 /* Each component stacks vertically in mobile view                             */
 /* -------------------------------------------------------------------------- */
 
-.footer-tagline {
-  grid-column: 1 / 2; /* Full width (single column) */
-  grid-row: 1 / 2;
-}
-.footer-highlights {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
 .footer-contact-social {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
+  text-align: center;
 }
 /* -------------------------------------------------------------------------- */
 /* 🌊 FULL-WIDTH BOTTOM SECTION                                               */
@@ -1010,6 +1028,7 @@ a.nav-link-primary:hover {
 /* ------------------------------- */
 
 .footer-socials-list {
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -1020,7 +1039,7 @@ a.nav-link-primary:hover {
 /* Apply this class to ALL list items (awards, works, social, bullets) */
 .footer-item {
   line-height: 1.2; /* Consistent line height for footer items to improve spacing */
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 /* ------------------------------- */
@@ -1156,7 +1175,9 @@ a.nav-link-primary:hover {
 .project-details {
   width: 100%;
   padding: var(--padding-small);
-  background: var(--color-gradient-project-details); /* TODO: Remove gradient background if you prefer a simpler design */
+  background: var(
+    --color-gradient-project-details
+  ); /* TODO: Remove gradient background if you prefer a simpler design */
 }
 
 /* Previous/Next Arrow Styles */
@@ -1261,7 +1282,9 @@ a.nav-link-primary:hover {
 
 .holding-page-copyright {
   font-size: 0.8rem; /* Smaller font size for copyright text */
-  color: var(--color-text-holding-footer); /* Custom color for the footer text */
+  color: var(
+    --color-text-holding-footer
+  ); /* Custom color for the footer text */
   margin-bottom: 0; /* Removes default margin from the bottom of the copyright text */
 }
 
@@ -1428,7 +1451,7 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 5rem;
+    width: 15rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
@@ -1436,11 +1459,10 @@ to keep your styles reusable and consistent.
     min-height: 100vh;
   }
 
+  .hero-small {
+  }
   .hero-headline-wrapper {
-    padding-top: var(--padding-jumbo);
-    padding-bottom: var(--padding-jumbo);
-    padding-left: var(--padding-ultra);
-    padding-right: var(--padding-ultra);
+    /*removed padding */
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
@@ -1560,25 +1582,13 @@ to keep your styles reusable and consistent.
     padding-right: var(--padding-jumbo);
     padding-bottom: 0;
     padding-left: var(--padding-jumbo);
-    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
-  }
-
-  /* Column 1: Tagline/Message */
-  .footer-tagline {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  /* Column 2: Awards & Works */
-  .footer-highlights {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
+    grid-template-columns: 1fr; /* One column */
   }
 
   /* Column 3: Contact & Social */
   .footer-contact-social {
+    grid-column: 1 / 2;
     grid-row: 1 / 2;
-    grid-column: 3 / 4;
   }
 
   /* ------------------------------- */
@@ -1586,7 +1596,7 @@ to keep your styles reusable and consistent.
   /* ------------------------------- */
   .footer-full-width {
     grid-row: 2 / 3;
-    grid-column: 1 / 4; /* Spans all three columns */
+    grid-column: 1 / 2; /* Spans one column */
     text-align: center;
     align-self: end; /* Aligns content to bottom */
   }
