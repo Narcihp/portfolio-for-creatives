@@ -148,16 +148,11 @@
   --color-nav-arrow-stroke-hover: #000;
   /* Components */
   --color-bg-full-width: #f7f3e9;
-  --color-bg-project-description: #f5dddd;
+  --color-bg-project-description: #ffffff;
   --color-bg-sidebar-project: #f7f3e9;
   --color-bg-sidebar-work: lemonchiffon;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
-  --color-gradient-project-details: linear-gradient(
-    -225deg,
-    #ff057c 0%,
-    #8d0b93 50%,
-    #321575 100%
-  );
+ 
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
