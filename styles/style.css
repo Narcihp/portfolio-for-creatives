@@ -136,19 +136,19 @@
   --color-text-project-title: #222;
   --color-text-work-grid-title: #222;
   /* Link States */
-  --color-link: #8c09f1;
-  --color-link-hover: #e600ff;
+  --color-link: #282828;
+  --color-link-hover: #6c6c6c;
   --color-link-visited: #222;
   /* Navigation */
-  --color-nav-link: #222;
-  --color-nav-link-hover: #321575;
+  --color-nav-link: #282828;
+  --color-nav-link-hover: #6c6c6c;
   --color-nav-arrow: #222;
   --color-nav-arrow-hover: #000;
   --color-nav-arrow-stroke: #747474;
   --color-nav-arrow-stroke-hover: #000;
   /* Components */
   --color-bg-full-width: #f7f3e9;
-  --color-bg-project-description: #ffffff;
+  --color-bg-project-description: #f7f3e9;
   --color-bg-sidebar-project: #f7f3e9;
   --color-bg-sidebar-work: lemonchiffon;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
@@ -695,7 +695,7 @@ a.nav-link-primary:hover {
   padding-bottom: 0;
 }
 .hero-header {
-  min-height: 6rem; /* Space reserved for logo + nav */
+  min-height: 0.5rem; /* Space reserved for logo + nav */
 }
 
 .nav-branding {
@@ -710,11 +710,13 @@ a.nav-link-primary:hover {
   flex-direction: row;
 }
 .nav-branding-item {
-  padding: var(--padding-tiny);
+  padding: var(--padding-small);
+    font-size: 1.4rem;
+
 }
 
 .nav-branding-logo {
-  width: 3rem;
+  width: 12rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
@@ -723,7 +725,7 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 3rem;
+  gap: 2rem;
   align-items: flex-start;
   justify-content: center;
   text-align: center; /* Keeps text centered */
@@ -989,7 +991,7 @@ a.nav-link-primary:hover {
 .footer-global {
   display: grid;
   grid-template-columns: 1fr; /* Single column layout */
-  grid-gap: 3rem; /* Consistent spacing between sections */
+  grid-gap: 0.2rem; /* Consistent spacing between sections */
   min-height: auto; /* Allows footer to expand based on content, no fixed height */
   background: var(--color-bg-footer); /* Using CSS variable for theming */
   padding: var(--padding-small); /* Internal spacing */
@@ -1007,6 +1009,13 @@ a.nav-link-primary:hover {
   grid-row: 3 / 4;
   text-align: center;
 }
+
+.footer-contact-social a[href^="mailto"] {
+  font-size: 1.1rem;     /* make it bigger */
+  text-decoration: underline;   /* underline it */
+  font-weight: 500;      /* optional: make it stronger */
+}
+
 /* -------------------------------------------------------------------------- */
 /* 🌊 FULL-WIDTH BOTTOM SECTION                                               */
 /* Typically used for copyright/legal information                             */
@@ -1028,7 +1037,8 @@ a.nav-link-primary:hover {
   flex-direction: row;
   justify-content: center;
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 2rem;
+  gap: 1.2rem;
 }
 
 .social-icon {
@@ -1072,7 +1082,8 @@ a.nav-link-primary:hover {
 }
 
 .footer-fineprint {
-  font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
+  margin-bottom: 3rem;
+  font-size: 0.950rem; /* Slightly smaller for disclaimers or captions */
   color: var(--color-text-secondary); /* Themed color */
 }
 
@@ -1343,6 +1354,23 @@ to keep your styles reusable and consistent.
 
 .play-page {
   /* Add page-specific layout or container styles here */
+
+}
+
+.play-page .hero {
+  min-height: 20vh;
+}
+
+.play-page .hero-headline-wrapper {
+  justify-content: center;
+  align-items: center !important;
+}
+
+.play-page .hero-headline-wrapper h4 {
+  margin-top: 7rem;   /* change to 2rem, 4rem, etc. */
+  justify-content: center;
+  align-items: center !important;
+
 }
 
 /*
@@ -1454,7 +1482,7 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 15rem;
+    width: 25rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
@@ -1650,10 +1678,4 @@ to keep your styles reusable and consistent.
 ██      ██ ██  ██ ██
 ██      ██ ██   ████
                                               
-That’s a wrap, class! 🧑‍🎓✨
 
-*/
-
-/* 🎉 You made it to the end! */
-/* This is a great place to celebrate your progress, add Easter eggs, or leave notes for your future self. */
-/* Happy coding, and don’t forget to take breaks, stay hydrated, and share your work proudly. 💻✨🎨 */

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.16 12.48">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Evory-Regular, Evory;
+        font-size: 12px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0 10.2)"><tspan class="cls-4" x="0" y="0">N</tspan><tspan x="7.98" y="0">a</tspan><tspan class="cls-2" x="14.1" y="0">r</tspan><tspan x="19.28" y="0">ci Has</tspan><tspan class="cls-5" x="52.91" y="0">h</tspan><tspan x="59.51" y="0">em </tspan><tspan class="cls-3" x="80.55" y="0">P</tspan><tspan class="cls-6" x="87.35" y="0">o</tspan><tspan x="94.21" y="0">ur</tspan></text>
+</svg>
