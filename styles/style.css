@@ -136,8 +136,8 @@
   --color-text-project-title: #222;
   --color-text-work-grid-title: #222;
   /* Link States */
-  --color-link: #222;
-  --color-link-hover: #111;
+  --color-link: #8c09f1;
+  --color-link-hover: #e600ff;
   --color-link-visited: #222;
   /* Navigation */
   --color-nav-link: #222;
@@ -152,7 +152,7 @@
   --color-bg-sidebar-project: #f7f3e9;
   --color-bg-sidebar-work: lemonchiffon;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
- 
+
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
@@ -1023,10 +1023,18 @@ a.nav-link-primary:hover {
 /* ------------------------------- */
 
 .footer-socials-list {
-  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin-bottom: 2rem;
+  padding: 1rem;
 }
 
+.social-icon {
+  font-size: 1.5rem;
+  width: 3%;
+}
 /* -------------------------------------------------------------------------- */
 /* 📏 Footer Item Spacing                                                     */
 /* -------------------------------------------------------------------------- */
@@ -1584,6 +1592,7 @@ to keep your styles reusable and consistent.
   .footer-contact-social {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    text-align: center;
   }
 
   /* ------------------------------- */
