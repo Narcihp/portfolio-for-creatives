@@ -961,6 +961,17 @@ a.nav-link-primary:hover {
   flex: 1; /* Flex-grow to take up available space */
 }
 
+.about-break {
+  margin-top: 130px; /* increase for more space */
+}
+
+.about-break a {
+  color: rgb(67, 100, 157);            /* or any color you prefer */
+  font-weight: 600;
+  
+  text-decoration-thickness: 2px;
+}
+
 /* Image section in the About page grid */
 .about-grid-image {
   grid-column: 1 / 2; /* Image spans the first column */
