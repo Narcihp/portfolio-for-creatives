@@ -1326,6 +1326,17 @@ a.nav-link-primary:hover {
   margin: 0 auto;
 }
 
+.error-headline-wrapper h3,
+.error-headline-wrapper p {
+  margin-top: 20px; 
+}
+
+.error-headline-wrapper img {
+  width: 30%;   /* make smaller */
+  height: auto; /* keep proportions */
+  
+}
+
 .error-page-animation {
   width: 25rem;
 }
@@ -1366,8 +1377,8 @@ to keep your styles reusable and consistent.
   align-items: center !important;
 }
 
-.play-page .hero-headline-wrapper h4 {
-  margin-top: 7rem;   /* change to 2rem, 4rem, etc. */
+.play-page .hero-headline-wrapper h3 {
+  margin-top: 6rem;   /* change to 2rem, 4rem, etc. */
   justify-content: center;
   align-items: center !important;
 
