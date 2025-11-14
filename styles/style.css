@@ -156,7 +156,7 @@
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #5200ff;
+  --color-bg-selection: #ffffff;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -206,7 +206,9 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  cursor: url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+  /* cursor: url("../assets/temp/up-cursor.png"), auto !important; */
+  
+  /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -467,6 +469,7 @@ h3 {
   margin-bottom: 1rem;
   line-height: 1.2;
   color: var(--h3-color);
+  text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
 }
 
 h4 {
@@ -1551,7 +1554,8 @@ to keep your styles reusable and consistent.
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-    padding: var(--padding-small);
+    padding: var(--padding-jumbo);
+
   }
 
   /* Project Page Flex Direction on Large Devices */
@@ -1575,6 +1579,7 @@ to keep your styles reusable and consistent.
     position: -webkit-sticky;
     position: sticky;
     top: 8rem;
+    padding: 0; /* removes padding on desktop */
     padding-right: 2rem;
   }
 
