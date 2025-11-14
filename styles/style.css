@@ -110,10 +110,10 @@
 
 :root {
   /* Typography */
-  --font-family-wordmark: "Evory", sans-serif;";
+  --font-family-wordmark: "Evory", sans-serif;
   --font-family-body: "karla", sans-serif;
   --font-family-heading: "karla", sans-serif;
-  --font-family-project-title: "karla", sans-serifserif;
+  --font-family-project-title: "karla", sans-serif;
   /* Core Colours */
   --color-text-primary: #222;
   --color-text-secondary: #333;
@@ -732,6 +732,15 @@ a.nav-link-primary:hover {
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
+@media (max-width: 600px) {
+  .nav-branding-logo {
+    font-size: 2rem;
+    width: 18rem;
+  }
+
+}
+
+
 .hero-headline-wrapper {
   width: 100%;
   display: flex;
@@ -974,7 +983,7 @@ a.nav-link-primary:hover {
 }
 
 .about-break {
-  margin-top: 130px; /* increase for more space */
+  margin-top: 0px; /* increase for more space */
 }
 
 .about-break a {
@@ -1401,7 +1410,7 @@ to keep your styles reusable and consistent.
 }
 
 .play-page .hero-headline-wrapper h3 {
-  margin-top: 6rem;   /* change to 2rem, 4rem, etc. */
+  margin-top: 4rem;   /* change to 2rem, 4rem, etc. */
   justify-content: center;
   align-items: center !important;
 
@@ -1638,6 +1647,8 @@ to keep your styles reusable and consistent.
   .about-grid-text {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    max-width: 65ch;
+    
   }
 
   /* ------------------------------- */
