@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Evory";
+  src: url("../fonts/evory/Evory.otf") format("woff2"),
+    url("../fonts/evory/Evory.woff") format("woff"),
+    url("../fonts/evory/Evory.otf") format("opentype"),
+    url("../fonts/evory/Evory.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -41,6 +41,8 @@
 /* Inter Font (great for readability and minimal design) */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+
+
 /*
 
 /* 
@@ -85,6 +87,9 @@
 /* File for adding accordion functionality to expand/collapse content sections */
 @import url("accordian.css");
 
+/* Evory Font */
+@import url("fonts.css");
+
 /* 
 ██    ██  █████  ██████  ██  █████  ██████  ██      ███████ ███████ 
 ██    ██ ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██      ██      
@@ -105,6 +110,7 @@
 
 :root {
   /* Typography */
+  --font-family-wordmark: "Evory", sans-serif;";
   --font-family-body: "karla", sans-serif;
   --font-family-heading: "karla", sans-serif;
   --font-family-project-title: "karla", sans-serifserif;
@@ -719,6 +725,9 @@ a.nav-link-primary:hover {
 }
 
 .nav-branding-logo {
+  font-family: var(--font-family-wordmark);
+  color: orangered;
+  font-size: 2rem;
   width: 12rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
