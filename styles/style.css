@@ -1296,43 +1296,6 @@ a.nav-link-primary:hover {
                                                        
 */
 
-/* ----------------------------------------------------------------
-   Holding Page Styles
-   ----------------------------------------------------------------
-   Includes layout, typography, and visual effects for the demo
-   landing page (index.html).
-
-   Related files:
-     • CSS: styles/interactive-blobs.css
-     • JS:  js/interactive-blobs.js
----------------------------------------------------------------- */
-
-.holding-page-animation {
-  width: 10rem;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-}
-
-.holding-page-title {
-  font-size: 1.5rem;
-  color: var(--color-text-holding-title);
-}
-
-.holding-page-footer {
-  display: grid;
-  place-items: center;
-  min-height: 10vh;
-  width: 100%;
-  padding: var(--padding-small);
-}
-
-.holding-page-copyright {
-  font-size: 0.8rem; /* Smaller font size for copyright text */
-  color: var(
-    --color-text-holding-footer
-  ); /* Custom color for the footer text */
-  margin-bottom: 0; /* Removes default margin from the bottom of the copyright text */
-}
 
 /*
 ███████ ██████  ██████   ██████  ██████  
