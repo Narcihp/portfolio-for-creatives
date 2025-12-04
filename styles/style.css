@@ -113,7 +113,7 @@
   --font-family-wordmark: "Evory", sans-serif;
   --font-family-body: "karla", sans-serif;
   --font-family-heading: "karla", sans-serif;
-  --font-family-project-title: "karla", sans-serif;
+  --font-family-project-title: "Evory", sans-serif;
   /* Core Colours */
   --color-text-primary: #222;
   --color-text-secondary: #333;
@@ -415,6 +415,12 @@ svg {
   padding-top: 56.25%; /* 16:9 Aspect Ratio (because 9 ÷ 16 = 0.5625) */
   margin-bottom: 1rem;
 }
+
+.project-video-large {
+  height: 700px; /* make this whatever size you want */
+}
+
+
 /* The iframe is absolutely positioned to fill the container */
 .responsive-iframe {
   position: absolute;
@@ -618,7 +624,7 @@ a:hover {
 
 /* Focus — when a link is focused (keyboard navigation) */
 a:focus {
-  outline: 1px solid var(--color-accent-primary);
+  outline: none;
 }
 
 /* Active — when the link is actively being clicked or tapped */
@@ -878,6 +884,16 @@ a.nav-link-primary:hover {
   /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
 }
 
+/* Smooth darken effect on project thumbnails */
+
+
+.work-grid-project-title {
+  font-family: "Evory", serif; /* ← THIS IS WHAT YOU ADD */
+  font-size: 2.875rem;
+  color: var(--color-text-work-grid-title);
+  text-wrap: balance;
+}
+
 /* Individual Work Grid Item */
 .work-page-grid-item,
 .overlay-container {
@@ -885,16 +901,26 @@ a.nav-link-primary:hover {
   height: auto;
   position: relative; /* Needed to position the overlay */
 }
-/* Masonry Overlay Text */
-.overlay-container:hover .overlay {
-  opacity: 1;
+
+/* Pink overlay effect on hover */
+.work-page-grid-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(255, 105, 180, 0); /* Hot pink, invisible initially */
+  transition: background 0.3s ease;
+}
+
+.work-page-grid-item:hover::after {
+  background: rgba(255, 252, 218, 0.25); /* Pink tint */
+  border-radius: var(--radius-lg);
 }
 
 /* Project container for background and padding */
 .project-container {
   background: var(--color-accent-primary); /* Set project background color */
-  padding: var(--padding-medium);
-}
+  padding: var(--padding-medium);}
 
 /* Overlay (appears on hover) */
 .overlay {
@@ -1306,6 +1332,10 @@ a.nav-link-primary:hover {
      • CSS: styles/interactive-blobs.css
      • JS:  js/interactive-blobs.js
 ---------------------------------------------------------------- */
+
+.holding-link:hover {
+  opacity: 0.7;         /* or underline if you want */
+}
 
 .holding-page {
   background:var(--color-bg);
