@@ -212,12 +212,13 @@
             height="1080"
             class="rounded-large"
             loading="lazy"
-            alt="Describe your project"
-          />
+            alt="Describe your project"/>
         </figure>
-
+      </main>
+    </div>
     
     <ul class="footer-global">
+
       <li class="footer-contact-social">
         <h2>Contact & Social</h2>
         <a href="mailto:narcihp708@email.com">narcihp708@email.com</a>
@@ -241,11 +242,12 @@
       </li>
 
       <li class="footer-full-width">
+       
         <p class="footer-fineprint">
           &copy; <span id="copyright-years"></span>
           Narci Hashem Pour
         </p>
-
+        </p>
         <script>
           document.getElementById("copyright-years").textContent +=
             new Date().getFullYear();
@@ -271,18 +273,33 @@
     </script>
   </body>
 </html>
+          
 
-      <main class="project-details">
-        <figure class="project-image">
-          <object
-            type="image/svg+xml"
-            data="assets/temp/mixed-media-animation-example.svg"
-            class="rounded-large"
-          ></object>
-        </figure>
-      </main>
+
+        
+
+    <div id="myID" class="bottomMenu hide">
+      <a href="project-4.html">Next Project</a>
     </div>
-    
 
-    
-    
+    <div id="myID" class="bottomMenu hide">
+      <a href="project-2.html">Previous Project</a>
+    </div>
+
+    <script>
+      myID = document.getElementById("myID");
+
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "bottomMenu show";
+        } else {
+          myID.className = "bottomMenu hide";
+        }
+      };
+
+      window.addEventListener("scroll", myScrollFunc);
+    </script>
+  </body>
+</html>
+
